@@ -1,5 +1,6 @@
 # DeepNeighbor
 
+[![Build Status](https://travis-ci.com/LouisBIGDATA/deepneighbor.svg?branch=master)](https://travis-ci.com/github/LouisBIGDATA/deepneighbor)
 [![Python Versions](https://img.shields.io/pypi/pyversions/deepneighbor.svg)](https://pypi.org/project/deepneighbor)
 [![PyPI Version](https://img.shields.io/pypi/v/deepneighbor.svg)](https://pypi.org/project/deepneighbor)
 [![license](https://img.shields.io/github/license/LouisBIGDATA/deepneighbor.svg?maxAge=2592000)](https://github.com/LouisBIGDATA/deepneighbor)
