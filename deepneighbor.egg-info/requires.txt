@@ -1,0 +1,11 @@
+h5py
+requests
+gensim==3.7.0
+joblib==0.13.0
+fastdtw==0.3.2
+tqdm
+numpy
+scikit-learn
+pandas
+matplotlib
+annoy
