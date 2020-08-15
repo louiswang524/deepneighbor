@@ -10,7 +10,7 @@ DeepNeighbor is a **High-level**,**Flexible** and **Extendible** package for emb
 It mainly has two parts : Embed step and Search step by the following codes:<br>
 <br>`model.train()`，which generates embeddings for users and items (Deep),
 <br> `model.search()`, which looks for Approximate nearest neighbor for seed user/item (Neighbor) .
-
+<br>
 
 ### Install
 ```python
