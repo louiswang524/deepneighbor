@@ -18,3 +18,17 @@ def generate_sentences(data):
         temp.extend(data[data.user == user].item.unique().tolist())
         out.append(temp)
     return out
+
+def generate_sentences_dw(data):
+    '''
+    input dataframe with user item and time.
+
+
+    '''
+    out = []
+    data = data.sort_values(['user','time'])
+    for user in data.user.unique():
+        temp = [user]
+        temp.extend(data[data.user == user].item.unique().tolist())
+        out.append(temp)
+    return out

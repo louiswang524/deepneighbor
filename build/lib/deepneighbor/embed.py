@@ -7,10 +7,17 @@ a embedding lookup dictionary {'user_id/item_id':[vector]}
 
 '''
 from gensim.models import Word2Vec
-import deepneighbor.config
+#import deepneighbor.config as config
 from deepneighbor.utils import generate_sentences
 from annoy import AnnoyIndex
 from sklearn import preprocessing
+
+
+EMBED_SIZE = 128
+WINDOW_SIZE = 10
+ITER = 5
+WORKERS = 3
+
 
 class Embed(object):
     def __init__(self,data):
@@ -24,21 +31,22 @@ class Embed(object):
 
 
         self.sentences = generate_sentences(data)
+        self.dimension = 0
 
-    def sentences(self):
-        return self.sentences
+
 
 
     def train(self, embed_size=128, window_size=5, workers=3, iter=5, **kwargs):
 
         kwargs["sentences"] = self.sentences
         kwargs["min_count"] = kwargs.get("min_count", 0)
-        kwargs["size"] = config.EMBED_SIZE
+        kwargs["size"] = embed_size
         kwargs["sg"] = 1  # skip gram
         kwargs["hs"] = 1  # deepwalk use Hierarchical Softmax
-        kwargs["workers"] = config.WORKERS
-        kwargs["window"] = config.WINDOW_SIZE
-        kwargs["iter"] = config.ITER
+        kwargs["workers"] = workers
+        kwargs["window"] = window_size
+        kwargs["iter"] = iter
+        self.dimension = embed_size
 
         print(f"There are {self.data.user.nunique()} users")
         print(f"There are {self.data.item.nunique()} items")
@@ -69,7 +77,7 @@ class Embed(object):
         k: number of cloest neighhbors
         '''
 
-        a = AnnoyIndex(config.EMBED_SIZE, 'angular')
+        a = AnnoyIndex(self.dimension, 'angular')
 
         words = self.data['user'].unique().tolist() + self.data['item'].unique().tolist()
         le = preprocessing.LabelEncoder()

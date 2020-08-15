@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: deepneighbor
-Version: 0.1.5
+Version: 0.1.9
 Summary: embedding-based item nearest neighborhoods extraction
 Home-page: https://github.com/LouisBIGDATA/deepneighbor
 Author: Yufeng Wang

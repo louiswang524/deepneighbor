@@ -19,7 +19,7 @@ REQUIRED_PACKAGES = [
 setuptools.setup(
 
   name="deepneighbor",
-  version="0.1.5",
+  version="0.1.9",
   author="Yufeng Wang",
   author_email="louiswang524@gmail.com",
   description="embedding-based item nearest neighborhoods extraction",
