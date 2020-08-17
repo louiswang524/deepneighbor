@@ -34,6 +34,6 @@ The input data for the **Embed()** should be a pandas DataFrame with two columns
 git clone https://github.com/Lou1sWang/deepneighbor.git
 cd deepneighbor/
 ``` 
-Then run the code ```python deepneighbor/main.py
+Then run the code ```python deepneighbor/main.py```
 
 ### License
