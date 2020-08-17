@@ -8,7 +8,7 @@ a embedding lookup dictionary {'user_id/item_id':[vector]}
 '''
 from gensim.models import Word2Vec
 #import deepneighbor.config as config
-from deepneighbor.utils import generate_sentences, generate_sentences_dw
+from deepneighbor.utils import generate_sentences
 from annoy import AnnoyIndex
 from sklearn import preprocessing
 
@@ -30,13 +30,15 @@ class Embed(object):
         self.data = data
         self.w2v_model = None
         self._annoy = None
+        self._le = None
         self._embeddings = {}
         self.model_type = model
 
         if self.model_type == 'w2v':
+
             self.sentences = generate_sentences(data)
-        if self.model_type == 'deepwalk' and 'time' in data.columns.tolist():
-            self.sentences = generate_sentences_dw(data)
+        if self.model_type == 'deepwalk':
+            pass
         if self.model_type == 'gcn':
             pass
 
@@ -45,7 +47,14 @@ class Embed(object):
 
 
 
-    def train(self, embed_size=128, window_size=5, workers=3, iter=5, **kwargs):
+    def train(self,
+            embed_size=128,
+            window_size=5,
+            workers=3,
+            iter=5,
+            task = 'NodeClassification',
+            train_test_ratio = 0.8,
+            **kwargs):
 
         if self.model_type == 'w2v':
             kwargs["sentences"] = self.sentences
@@ -70,12 +79,16 @@ class Embed(object):
             self._annoy = AnnoyIndex(self.dimension, 'angular')
 
             words = self.data['user'].unique().tolist() + self.data['item'].unique().tolist()
-            le = preprocessing.LabelEncoder()
-            le.fit(words)
+            self._le = preprocessing.LabelEncoder()
+            self._le.fit(words)
             for word in words:
-                self._annoy.add_item(le.transform([word])[0],self.w2v_model.wv[word])
+                self._annoy.add_item(self._le.transform([word])[0],self.w2v_model.wv[word])
 
             self._annoy.build(-1)
+
+        if self.model_type == 'gcn':
+            pass
+
 
         #return model_w2v
 
@@ -98,5 +111,5 @@ class Embed(object):
         k: number of cloest neighhbors
         '''
 
-        a_return = self._annoy.get_nns_by_item(le.transform([seed])[0], k)
-        return le.inverse_transform(a_return)
+        a_return = self._annoy.get_nns_by_item(self._le.transform([seed])[0], k)
+        return list(self._le.inverse_transform(a_return))
