@@ -29,11 +29,11 @@ model.search(seed = 'Louis', k=10)
 ### Input format
 The input data for the **Embed()** should be a pandas DataFrame with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
 ### Models
-- [x]word2vec
-- [ ]deepwalk
-- [x]graph convolutional network
-- [ ]matrix factorization
-- [ ]graph attention network
+- [x]  word2vec
+- [ ]  deepwalk
+- [x]  graph convolutional network
+- [ ]  matrix factorization
+- [ ]  graph attention network
 
 ### Examples
 ```
