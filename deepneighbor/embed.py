@@ -8,7 +8,7 @@ a embedding lookup dictionary {'user_id/item_id':[vector]}
 '''
 from gensim.models import Word2Vec
 #import deepneighbor.config as config
-from deepneighbor.utils import generate_sentences
+from .utils import generate_sentences
 from annoy import AnnoyIndex
 from sklearn import preprocessing
 
