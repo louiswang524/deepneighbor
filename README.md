@@ -36,10 +36,6 @@ The input data for the **Embed()** should be a pandas DataFrame with two columns
 - [ ]  graph attention network
 
 ### Examples
-```
-git clone https://github.com/Lou1sWang/deepneighbor.git
-cd deepneighbor/
-``` 
-Then run the code ```python deepneighbor/main.py```
+TBD
 
 ### License
