@@ -74,8 +74,13 @@ model.train(window_size=5,
 - ```num_of_walks```Number of random walks.
 - ```beta``` and ```gamma```Regularization parameter.
 
+### How To Search
+####```model.search(seed, k)```
+- ```seed``` The Driver for the algorithms
+- ```k``` Number of Nearest Neighbors.
 
 ### Examples
 TBD
 
 ### License
+This project is under MIT License, please see [here](LICENSE) for details.
