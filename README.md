@@ -8,6 +8,8 @@
 [![license](https://img.shields.io/github/license/LouisBIGDATA/deepneighbor.svg?maxAge=2592000)](https://github.com/LouisBIGDATA/deepneighbor)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Lou1sWang/deepneighbor)
 [![Downloads](https://pepy.tech/badge/deepneighbor)](https://pepy.tech/project/deepneighbor)
+[![GitHub Issues](https://img.shields.io/github/issues/Lou1sWang/deepneighbor.svg
+)](https://github.com/Lou1sWang/deepneighbor/issues)
 ---
 
 DeepNeighbor is a **High-level**,**Flexible** and **Extendible** package for embedding-based information retrieval from user-item interaction logs. Just as the name suggested, **'deep'** means deep learning models to get user/item embeddings, while **'neighbor'** means approximate nearest neighbor search in the embedding space.<br>
