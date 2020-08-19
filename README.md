@@ -25,7 +25,7 @@ pip install deepneighbor
 ### How To Use
 
 ```python
-from deepneighbor.embed import Embed
+from deepneighbor import Embed
 
 model = Embed(data)
 model.train(model='gat')
@@ -81,6 +81,7 @@ model.train(window_size=5,
 
 ### Examples
 TBD
-
+### Contact
+Please contact louiswang524@gmail.com for collaboration or providing feedbacks.
 ### License
 This project is under MIT License, please see [here](LICENSE) for details.
