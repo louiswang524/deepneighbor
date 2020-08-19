@@ -75,7 +75,7 @@ model.train(window_size=5,
 - ```beta``` and ```gamma```Regularization parameter.
 
 ### How To Search
-####```model.search(seed, k)```
+#### ```model.search(seed, k)```
 - ```seed``` The Driver for the algorithms
 - ```k``` Number of Nearest Neighbors.
 
