@@ -26,18 +26,52 @@ pip install deepneighbor
 from deepneighbor.embed import Embed
 
 model = Embed(data)
-model.train()
+model.train(model='gat')
 model.search(seed = 'Louis', k=10)
 ```
 ### Input format
-The input data for the **Embed()** should be a pandas DataFrame with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
+The input data for the **Embed()** should be a (*.csv or *.txt ) file with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
 ### Models
 - [x]  word2vec
 - [ ] Siamese Network with triple loss
 - [ ]  deepwalk
 - [x]  graph convolutional network
 - [ ]  matrix factorization
-- [ ]  graph attention network
+- [x]  graph attention network
+
+### Model Parameters
+#### deepwalk
+```python
+model = Embed(data, model = 'deepwalk')
+model.train(window_size=5,
+            workers=1,
+            iter=1
+            dimensions=128)
+```
+- ```window_size``` Skip-gram window size.
+- ```workers```Use these many worker threads to train the model (=faster training with multicore machines).
+- ```iter``` Number of iterations (epochs) over the corpus.
+- ```dimensions``` Dimensions for the node embeddings
+
+
+#### graph attention network 
+```python
+model = Embed(data, model = 'gat')
+model.train(window_size=5,
+            learning_rate=0.01,
+            epochs = 10,
+            dimensions = 128,
+            num_of_walks=80,
+            beta=0.5,
+            gamma=0.5,)
+```
+- ```window_size``` Skip-gram window size.
+- ```learning_rate``` learning rate for optimizing graph attention network
+- ```epochs``` Number of gradient descent iterations.
+- ```dimensions``` Dimensions for the embeddings for each node (user/item)
+- ```num_of_walks```Number of random walks.
+- ```beta``` and ```gamma```Regularization parameter.
+
 
 ### Examples
 TBD
