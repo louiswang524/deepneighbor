@@ -1,22 +1,33 @@
 # DeepNeighbor
+<br />
 <p align="center">
-  <img src="deepneighbor_logo.png"/>
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="deepneighbor_logo.png" alt="Logo" width="120" height="120">
+  </a>
+  <p align="center">
+    Embedding-based Retrieval for ANN Search and Recommendations!
+    <br />
+    <a href="https://colab.research.google.com/drive/1j6uWt_YYyHBQDK7EN3f5GTTZTmNn2Xc5?usp=sharing">View Demo</a>
+    ·
+    <a href="https://github.com/Lou1sWang/deepneighbor/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/Lou1sWang/deepneighbor/issues">Request Feature</a>
+  </p>
 </p>
 
 [![Python Versions](https://img.shields.io/pypi/pyversions/deepneighbor.svg)](https://pypi.org/project/deepneighbor)
 [![PyPI Version](https://img.shields.io/pypi/v/deepneighbor.svg)](https://pypi.org/project/deepneighbor)
 [![license](https://img.shields.io/github/license/LouisBIGDATA/deepneighbor.svg?maxAge=2592000)](https://github.com/LouisBIGDATA/deepneighbor)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Lou1sWang/deepneighbor)
-[![Downloads](https://pepy.tech/badge/deepneighbor)](https://pepy.tech/project/deepneighbor)
-[![GitHub Issues](https://img.shields.io/github/issues/Lou1sWang/deepneighbor.svg
-)](https://github.com/Lou1sWang/deepneighbor/issues)
----
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Lou1sWang/deepneighbor/)
 
-DeepNeighbor is a **High-level**,**Flexible** and **Extendible** package for embedding-based information retrieval from user-item interaction logs. Just as the name suggested, **'deep'** means deep learning models to get user/item embeddings, while **'neighbor'** means approximate nearest neighbor search in the embedding space.<br>
-It mainly has two parts : Embed step and Search step by the following codes:<br>
-<br>`model = Embed(data_path); model.train()`，which generates embeddings for users and items (Deep),
-<br> `model.search()`, which looks for Approximate nearest neighbor for seed user/item (Neighbor) .
-<br>
+
+[![Downloads](https://pepy.tech/badge/deepneighbor)](https://pepy.tech/project/deepneighbor)
+[![GitHub Issues](https://img.shields.io/github/issues/Lou1sWang/deepneighbor.svg)](https://github.com/Lou1sWang/deepneighbor/issues)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Lou1sWang/deepneighbor/graphs/commit-activity)
+[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](louiswang524@gmail.com)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+
 
 ### Install
 ```python
