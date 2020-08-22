@@ -39,7 +39,8 @@ The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g.
 - [ ] Deep Semantic Similarity Model
 - [ ] Siamese Network with triple loss
 - [ ] Deepwalk
-- [x] Graph convolutional network
+- [ ] Graph convolutional network
+- [x] Neural Graph Collaborative Filtering algorithm
 - [ ] Matrix factorization
 - [x] Graph attention network
 
