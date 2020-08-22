@@ -1,8 +1,8 @@
 # DeepNeighbor
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="deepneighbor_logo.png" alt="Logo" width="120" height="120">
+  <a >
+    <img src="deepneighbor_logo.png" alt="Logo" width="150" height="150">
   </a>
   <p align="center">
     Embedding-based Retrieval for ANN Search and Recommendations!
