@@ -56,9 +56,9 @@ The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g.
 - [x] Graph attention network                        `gat`
 
 ### Model Parameters
-#### deepwalk
+#### word2vec
 ```python
-model = Embed(data, model = 'deepwalk')
+model = Embed(data, model = 'w2v')
 model.train(window_size=5,
             workers=1,
             iter=1
