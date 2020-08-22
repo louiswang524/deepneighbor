@@ -14,7 +14,7 @@
 
 DeepNeighbor is a **High-level**,**Flexible** and **Extendible** package for embedding-based information retrieval from user-item interaction logs. Just as the name suggested, **'deep'** means deep learning models to get user/item embeddings, while **'neighbor'** means approximate nearest neighbor search in the embedding space.<br>
 It mainly has two parts : Embed step and Search step by the following codes:<br>
-<br>`model.train()`，which generates embeddings for users and items (Deep),
+<br>`model = Embed(data_path); model.train()`，which generates embeddings for users and items (Deep),
 <br> `model.search()`, which looks for Approximate nearest neighbor for seed user/item (Neighbor) .
 <br>
 
@@ -27,19 +27,21 @@ pip install deepneighbor
 ```python
 from deepneighbor import Embed
 
-model = Embed(data)
-model.train(model='gat')
+model = Embed(data,model='gat')
+model.train()
 model.search(seed = 'Louis', k=10)
 ```
 ### Input format
-The input data for the **Embed()** should be a (*.csv or *.txt ) file with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
+The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g. '\data\data.csv')with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
 ### Models
-- [x]  word2vec
+- [x] Word2Vec
+- [ ] Factorization Machines
+- [ ] Deep Semantic Similarity Model
 - [ ] Siamese Network with triple loss
-- [ ]  deepwalk
-- [x]  graph convolutional network
-- [ ]  matrix factorization
-- [x]  graph attention network
+- [ ] Deepwalk
+- [x] Graph convolutional network
+- [ ] Matrix factorization
+- [x] Graph attention network
 
 ### Model Parameters
 #### deepwalk
