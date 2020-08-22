@@ -33,16 +33,16 @@ model.search(seed = 'Louis', k=10)
 ```
 ### Input format
 The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g. '\data\data.csv')with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
-### Models
-- [x] Word2Vec
-- [ ] Factorization Machines
+### Models & parameters in Embed()
+- [x] Word2Vec `w2v`
+- [ ] Factorization Machines `fm`
 - [ ] Deep Semantic Similarity Model
 - [ ] Siamese Network with triple loss
 - [ ] Deepwalk
 - [ ] Graph convolutional network
-- [x] Neural Graph Collaborative Filtering algorithm
-- [ ] Matrix factorization
-- [x] Graph attention network
+- [x] Neural Graph Collaborative Filtering algorithm `ngcf`
+- [ ] Matrix factorization `mf`
+- [x] Graph attention network                        `gat`
 
 ### Model Parameters
 #### deepwalk
