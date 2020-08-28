@@ -38,10 +38,10 @@ pip install deepneighbor
 ```python
 from deepneighbor import Embed
 
-model = Embed(data,model='gat')
-model.train()
-model.search(seed = 'Louis', k=10)
-embedings = model.get_embeddings()
+model = Embed(data_path, model='gat')
+model.train() # see optional parameters below
+model.search(seed = 'Louis', k=10) # ANN search
+embedings = model.get_embeddings() # dictionary. key: node; value: n-dim node embedding
 ```
 ### Input format
 The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g. '\data\data.csv')with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
