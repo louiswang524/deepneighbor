@@ -97,7 +97,6 @@ model.train(window_size=5,
 
 ### Examples
 Open [Colab](https://colab.research.google.com/drive/1j6uWt_YYyHBQDK7EN3f5GTTZTmNn2Xc5?usp=sharing) to run the example with facebook data.
-### Contact
-Please contact louiswang524@gmail.com for collaboration or providing feedbacks.
+
 ### License
 This project is under MIT License, please see [here](LICENSE) for details.
