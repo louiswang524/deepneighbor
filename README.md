@@ -41,19 +41,21 @@ from deepneighbor import Embed
 model = Embed(data,model='gat')
 model.train()
 model.search(seed = 'Louis', k=10)
+embedings = model.get_embeddings()
 ```
 ### Input format
 The input data for the **Embed()** should be a (*.csv or *.txt ) file path (e.g. '\data\data.csv')with two columns in order: 'user' and 'item'. For each user, the item are recommended to be ordered by time.
 ### Models & parameters in Embed()
 - [x] Word2Vec `w2v`
+- [x] Graph attention network                    `gat`
 - [ ] Factorization Machines `fm`
 - [ ] Deep Semantic Similarity Model
 - [ ] Siamese Network with triple loss
 - [ ] Deepwalk
 - [ ] Graph convolutional network
-- [x] Neural Graph Collaborative Filtering algorithm `ngcf`
+- [ ] Neural Graph Collaborative Filtering algorithm `ngcf`
 - [ ] Matrix factorization `mf`
-- [x] Graph attention network                        `gat`
+
 
 ### Model Parameters
 #### word2vec
